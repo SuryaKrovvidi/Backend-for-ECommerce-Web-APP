@@ -27,7 +27,7 @@ public class SignupService {
         if(userModelDao.existsById(userModel.getEmail())) {
             return false;
         }
-        //else save in database
+        //else
         CartModel cartModel = new CartModel();
 
         cartModel.setCartId(idGenerator.getSaltString());

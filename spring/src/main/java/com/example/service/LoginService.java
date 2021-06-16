@@ -29,8 +29,6 @@ public class LoginService {
         }
 
         //save the user in login model table after checking the password
-//        System.out.println(loginModel.getPassword());
-//        System.out.println(userModelDao.findById(loginModel.getEmail()).get().getPassword());
         if(loginModel.getPassword().equals(userModelDao.findById(loginModel.getEmail()).get().getPassword())) {
             loginModelDao.save(loginModel);
             return true;

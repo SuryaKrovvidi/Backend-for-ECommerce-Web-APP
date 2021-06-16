@@ -33,26 +33,7 @@ public class CartService {
     @Autowired
     IdGenerator idGenerator;
 
-//    public ResponseEntity<CartItemModel> addToCart(int quantity, String userId, String productId){
-//        if(!(productModelDao.existsById(productId))){
-//            return new ResponseEntity<CartItemModel>((CartItemModel) null, HttpStatus.BAD_REQUEST);
-//        }
-//
-//        ProductModel productModel = productModelDao.findById(productId).get();
-//        UserModel userModel = userModelDao.findById(userId).get();
-//        CartModel cartModel = userModel.getCart();
-//
-//        CartItemModel cartItemModel = new CartItemModel();
-//        cartItemModel.setCartItemId(idGenerator.getSaltString());
-//        cartItemModel.setQuantity(quantity);
-//        cartItemModel.setPrice(productModel.getPrice());
-//        cartItemModel.setProductName(productModel.getProductName());
-//
-//        cartModel.getCartItems().add(cartItemModel);
-//        cartModelDao.save(cartModel);
-//
-//        return new ResponseEntity<CartItemModel>(cartItemModel, HttpStatus.OK);
-//    }
+
 
     public ResponseEntity<CartItemModel> addToCart(CartItemModel cartItemModel, String userId){
 

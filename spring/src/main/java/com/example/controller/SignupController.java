@@ -18,7 +18,7 @@ public class SignupController {
     @PostMapping("/signup")
     public Boolean saveUser(@RequestBody UserModel user) {
         //this will store the user in out database
-        System.out.println("Hit!!");
+        System.out.println("!!!!");
         return signupService.addUser(user);
     }
 

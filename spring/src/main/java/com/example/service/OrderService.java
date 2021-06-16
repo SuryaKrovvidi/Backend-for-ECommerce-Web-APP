@@ -88,13 +88,11 @@ public class OrderService {
             String price = item.getPrice();
             OrderModel newOrder = new OrderModel(orderId, userId, productName, quantity, totalPrice, status, price);
 
-            //DELETE THIS ITEM FROM THE CART
-//            cartItemModelDao.deleteById(item.getCartItemId());
+
 
             //ADD THIS ORDER TO THE USER'S ORDER LIST AND ALSO THE placedOrderS LIST
             ordersPlaced.add(newOrder);
-//            userOrders.add(newOrder);
-//            userModelDao.save(userModel);
+
 
         }
         for(OrderModel order : ordersPlaced){

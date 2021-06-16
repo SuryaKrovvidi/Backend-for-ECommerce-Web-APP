@@ -17,7 +17,6 @@ public class LoginController {
 
     @PostMapping("/login")
     public Boolean checkUser(@RequestBody LoginModel loginModel) {
-        //this will store the loginModel in our database, means this user is currently logged in
         return loginService.addLogin(loginModel);
     }
 

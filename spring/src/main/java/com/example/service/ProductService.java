@@ -51,7 +51,7 @@ public class ProductService {
 
 
     //This service updates the details of a product
-    public ResponseEntity<ProductModel> productEditSave(String productId, ProductModel productModel){    //https://stackoverflow.com/questions/39741102/how-to-beautifully-update-a-jpa-entity-in-spring-data
+    public ResponseEntity<ProductModel> productEditSave(String productId, ProductModel productModel){
 
         if(!(productModelDao.existsById(productId))){
             return new ResponseEntity<ProductModel>((ProductModel) null, HttpStatus.BAD_REQUEST);
@@ -89,7 +89,6 @@ public class ProductService {
 
     public ResponseEntity<ProductModel> productDelete(String productId){
 
-//        System.out.println(productId);      //DO NOT PASS A JSON "OBJECT" IN THE REQUEST, PASS THE ID AS PLAIN STRING
 
         if(productModelDao.existsById(productId)){
 
